@@ -5,15 +5,16 @@
 host: ""
 
 # Cloud deployment listen port (must not be 0)
-port: 8000
+port: 8317
 
-proxy-api-key: haimichenha
+api-keys:
+  - haimichenha
 
 # 管理密钥
 management-api-key: gcmp-management
 
 # 容器内认证文件目录（必须显式设置，避免 auth-dir 为空导致启动失败）
-auth-dir: /CLIProxyAPI/auths
+auth-dir: /root/.cli-proxy-api
 
 # ============================================================
 # Claude/Anthropic 原生端点 (用于 /v1/messages)
@@ -68,9 +69,9 @@ openai-compatibility:
 
   # claudex - OpenAI 兼容
   - name: claudex
-    base-url: https://code.claudex.us.ci/v1
+    base-url: https://claudex.us.ci/v1
     api-key:
-      - api-key: sk-7JYdymD7X28VLQh_LFbnLyoF0BytEmBIqGR_CyQUtlGNvgvBWpFKgxX6LrQ
+      - api-key: sk-uSN67Z0OhzkHkeQX5IZ9mKGo9ncGByOJNJY5Ytmh4Ff5sxze
     models:
       - name: claude-opus-4-6
         alias: fancoclaude-opus-4-6
@@ -78,6 +79,10 @@ openai-compatibility:
         alias: fancoclaude-opus-4-5-20251101
       - name: claude-opus-4-5
         alias: fancoclaude-opus-4-5
+      - name: gpt-5.3-codex
+        alias: fancogpt-5.3-codex
+      - name: gpt-5.2-codex
+        alias: fancogpt-5.2-codex
 # ============================================================
 # Codex/Responses 端点 (用于 /v1/responses)
 # 这些端点支持 OpenAI Responses API 格式
@@ -86,7 +91,7 @@ openai-compatibility:
 codex-api-key:
   # kfc - Responses 端点 (主要)
   - name: kfc-responses
-    base-url: https://kfc-api.sxxe.net/v1
+    base-url: https://kfc-api.sxxe.net
     api-key: sk-hrznz62Miv83blM3YdBas7YthFrVqVd5xCdAUowzwPYVZIti
     models:
       - name: gpt-5.3-codex-xhigh
@@ -99,7 +104,7 @@ codex-api-key:
         alias: kfcgpt-5.2-codex-xhigh
 
   - name: kfc-responses-2
-    base-url: https://kfc-api.sxxe.net/v1
+    base-url: https://kfc-api.sxxe.net
     api-key: sk-USJrjyL8OPXR7RbZgyC8w4gdmTZB6cWxm8HPolhqfDD9TJIU
     models:
       - name: gpt-5.3-codex-xhigh
