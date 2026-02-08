@@ -96,7 +96,7 @@ codex-api-key:
       - name: gpt-5.2-xhigh
         alias: kfcgpt-5.2-xhigh
       - name: gpt-5.2-codex-xhigh
-        alias: kfcgpt-5.2-codex-xhig
+        alias: kfcgpt-5.2-codex-xhigh
 
   - name: kfc-responses-2
     base-url: https://kfc-api.sxxe.net
