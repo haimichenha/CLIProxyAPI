@@ -1,5 +1,12 @@
 # CLIProxyAPI 配置 - 三端互转 (OpenAI ↔ Claude/Anthropic ↔ Codex/Responses)
 # 代理密钥 - GCMP 使用此密钥访问代理
+
+# Server host/interface to bind to
+host: ""
+
+# Cloud deployment listen port (must not be 0)
+port: 8000
+
 proxy-api-key: haimichenha
 
 # 管理密钥
