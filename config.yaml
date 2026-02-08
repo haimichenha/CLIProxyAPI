@@ -68,9 +68,9 @@ openai-compatibility:
 
   # claudex - OpenAI 兼容
   - name: claudex
-    base-url: https://claudex.us.ci/v1
+    base-url: https://code.claudex.us.ci/v1
     api-key:
-      - api-key: sk-uSN67Z0OhzkHkeQX5IZ9mKGo9ncGByOJNJY5Ytmh4Ff5sxze
+      - api-key: sk-7JYdymD7X28VLQh_LFbnLyoF0BytEmBIqGR_CyQUtlGNvgvBWpFKgxX6LrQ
     models:
       - name: claude-opus-4-6
         alias: fancoclaude-opus-4-6
@@ -78,10 +78,6 @@ openai-compatibility:
         alias: fancoclaude-opus-4-5-20251101
       - name: claude-opus-4-5
         alias: fancoclaude-opus-4-5
-      - name: gpt-5.3-codex
-        alias: fancogpt-5.3-codex
-      - name: gpt-5.2-codex
-        alias: fancogpt-5.2-codex
 # ============================================================
 # Codex/Responses 端点 (用于 /v1/responses)
 # 这些端点支持 OpenAI Responses API 格式
