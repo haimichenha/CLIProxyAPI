@@ -5,6 +5,9 @@ proxy-api-key: haimichenha
 # 管理密钥
 management-api-key: gcmp-management
 
+# 容器内认证文件目录（必须显式设置，避免 auth-dir 为空导致启动失败）
+auth-dir: /CLIProxyAPI/auths
+
 # ============================================================
 # Claude/Anthropic 原生端点 (用于 /v1/messages)
 # 这些端点接收 Anthropic Messages API 格式请求
