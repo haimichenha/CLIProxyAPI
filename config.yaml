@@ -121,7 +121,6 @@ codex-api-key:
       - name: gpt-5.2-codex
         alias: wonggpt-5.2-codex
       - name: gpt-5.2
-        alias: wonggpt-5.2-codex
         alias: wonggpt-5.2
 
   - name: wzw-responses-2
