@@ -55,7 +55,7 @@ claude-api-key:
 openai-compatibility:
   # feisakura - OpenAI 兼容
   - name: feisakura
-    base-url: https://api.feisakura.fun/v1
+    base-url: https://api.feisakura.fun
     api-key:
       - api-key: sk-KtxnuaX7AWOOk2SDSuYJQ4lkw8h79fTsHqs4GxY5R5Ssi3S6
     models:
@@ -68,7 +68,7 @@ openai-compatibility:
 
   # claudex - OpenAI 兼容
   - name: claudex
-    base-url: https://code.claudex.us.ci/v1
+    base-url: https://code.claudex.us.ci
     api-key:
       - api-key: sk-7JYdymD7X28VLQh_LFbnLyoF0BytEmBIqGR_CyQUtlGNvgvBWpFKgxX6LrQ
     models:
