@@ -27,22 +27,22 @@ claude-api-key:
     api-key: sk-K1KqwBtD3GBVeG4LwJqmUTEyOxiw6m9ZaLxr8ULTBCcB7rwz
     models:
       - name: claude-opus-4-5-20251101
-        alias: claude-opus-4-5
+        alias: anyrouterclaude-opus-4-5
       - name: claude-haiku-4-5-20251001
-        alias: claude-haiku-4-5
+        alias: anyrouterclaude-haiku-4-5
       - name: claude-opus-4-6
-        alias: claude-opus-4-6
+        alias: anyrouterclaude-opus-4-6
 
   - name: anyrouter-2
     base-url: https://anyrouter.top
     api-key: sk-3I0jIsf9Tjdy7ym0eeBfxgaYFPbDM98R3AnbHqoiRURzEbsd
     models:
       - name: claude-sonnet-4-20250514
-        alias: claude-sonnet-4-20250514
+        alias: anyrouterclaude-sonnet-4-20250514
       - name: claude-3-7-sonnet-20250219
-        alias: claude-3-7-sonnet-20250219
+        alias: anyrouterclaude-3-7-sonnet-20250219
       - name: claude-3-5-sonnet-20241022
-        alias: claude-3-5-sonnet-20241022
+        alias: anyrouterclaude-3-5-sonnet-20241022
 
 # ============================================================
 # OpenAI 兼容端点 (用于 /v1/chat/completions)
@@ -56,11 +56,11 @@ openai-compatibility:
       - api-key: sk-KtxnuaX7AWOOk2SDSuYJQ4lkw8h79fTsHqs4GxY5R5Ssi3S6
     models:
       - name: claude-opus-4-5-20251101
-        alias: claude-opus-4-5
+        alias: xyclaude-opus-4-5
       - name: claude-opus-4-6
-        alias: claude-opus-4-6
+        alias: xyclaude-opus-4-6
       - name: claude-opus-4-6-20260205
-        alias: claude-opus-4-6-20260205
+        alias: xyclaude-opus-4-6-20260205
 
   # claudex - OpenAI 兼容
   - name: claudex
@@ -69,15 +69,15 @@ openai-compatibility:
       - api-key: sk-uSN67Z0OhzkHkeQX5IZ9mKGo9ncGByOJNJY5Ytmh4Ff5sxze
     models:
       - name: claude-opus-4-6
-        alias: claude-opus-4-6
+        alias: fancoclaude-opus-4-6
       - name: claude-opus-4-5-20251101
-        alias: claude-opus-4-5-20251101
+        alias: fancoclaude-opus-4-5-20251101
       - name: claude-opus-4-5
-        alias: claude-opus-4-5
+        alias: fancoclaude-opus-4-5
       - name: gpt-5.3-codex
-        alias: gpt-5.3-codex
+        alias: fancogpt-5.3-codex
       - name: gpt-5.2-codex
-        alias: gpt-5.2-codex
+        alias: fancogpt-5.2-codex
 # ============================================================
 # Codex/Responses 端点 (用于 /v1/responses)
 # 这些端点支持 OpenAI Responses API 格式
@@ -90,26 +90,26 @@ codex-api-key:
     api-key: sk-hrznz62Miv83blM3YdBas7YthFrVqVd5xCdAUowzwPYVZIti
     models:
       - name: gpt-5.3-codex-xhigh
-        alias: gpt-5.3-codex-xhigh
+        alias: kfcgpt-5.3-codex-xhigh
       - name: gpt-5.3-codex
-        alias: gpt-5.3-codex
+        alias: kfcgpt-5.3-codex
       - name: gpt-5.2-xhigh
-        alias: gpt-5.2-xhigh
+        alias: kfcgpt-5.2-xhigh
       - name: gpt-5.2-codex-xhigh
-        alias: gpt-5.2-codex-xhig
+        alias: kfcgpt-5.2-codex-xhig
 
   - name: kfc-responses-2
     base-url: https://kfc-api.sxxe.net
     api-key: sk-USJrjyL8OPXR7RbZgyC8w4gdmTZB6cWxm8HPolhqfDD9TJIU
     models:
       - name: gpt-5.3-codex-xhigh
-        alias: gpt-5.3-codex-xhigh
+        alias: kfcgpt-5.3-codex-xhigh
       - name: gpt-5.3-codex
-        alias: gpt-5.3-codex
+        alias: kfcgpt-5.3-codex
       - name: gpt-5.2-xhigh
-        alias: gpt-5.2-xhigh
+        alias: kfcgpt-5.2-xhigh
       - name: gpt-5.2-codex-xhigh
-        alias: gpt-5.2-codex-xhigh
+        alias: kfcgpt-5.2-codex-xhigh
 
   # wzw - Responses 端点
   - name: wzw-responses
@@ -117,22 +117,23 @@ codex-api-key:
     api-key: sk-WvTzFcpVLf4ADuMmMUxb0DIUViKbL4veHjpuzPI96j3RJyx1
     models:
       - name: gpt-5.3-codex
-        alias: gpt-5.3-codex
+        alias: wonggpt-5.3-codex
       - name: gpt-5.2-codex
-        alias: gpt-5.2-codex
+        alias: wonggpt-5.2-codex
       - name: gpt-5.2
-        alias: gpt-5.2
+        alias: wonggpt-5.2-codex
+        alias: wonggpt-5.2
 
   - name: wzw-responses-2
     base-url: https://wzw.pp.ua
     api-key: sk-pH7jCaocIbEbinneux3bgmGnk0hV8ftvW7ZCjRJCoBw9uj28
     models:
       - name: claude-opus-4-5-20251101
-        alias: claude-opus-4-5-20251101
+        alias: wongclaude-opus-4-5-20251101
       - name: claude-opus-4-5
-        alias: claude-opus-4-5
+        alias: wongclaude-opus-4-5
       - name: claude-opus-4-6
-        alias: claude-opus-4-6
+        alias: wongclaude-opus-4-6
 
   # x666 - Responses 端点
   - name: x666-responses
@@ -140,8 +141,8 @@ codex-api-key:
     api-key: sk-wT2gX2xM1S1uSeNFjTOL1UBxoHah8sI1wP2IOp1ORW6S8X7p
     models:
       - name: gpt-5.3-codex
-        alias: gpt-5.3-codex
+        alias: bhgpt-5.3-codex
       - name: gpt-5.2-high
-        alias: gpt-5.2-high
+        alias: bhgpt-5.2-high
       - name: gpt-5.2-codex
-        alias: gpt-5.2-codex
+        alias: bhgpt-5.2-codex
