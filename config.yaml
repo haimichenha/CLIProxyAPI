@@ -22,6 +22,12 @@ claude-api-key:
         alias: claude-3-7-sonnet-20250219
       - name: claude-3-5-sonnet-20241022
         alias: claude-3-5-sonnet-20241022
+      - name: claude-3-5-sonnet-20240620
+        alias: claude-3-5-sonnet-20240620
+      - name: claude-3-opus-20240229
+        alias: claude-3-opus-20240229
+      - name: claude-3-haiku-20240307
+        alias: claude-3-haiku-20240307
 
   - name: anyrouter-2
     base-url: https://anyrouter.top
@@ -29,6 +35,10 @@ claude-api-key:
     models:
       - name: claude-sonnet-4-20250514
         alias: claude-sonnet-4-20250514
+      - name: claude-3-7-sonnet-20250219
+        alias: claude-3-7-sonnet-20250219
+      - name: claude-3-5-sonnet-20241022
+        alias: claude-3-5-sonnet-20241022
 
 # ============================================================
 # OpenAI 兼容端点 (用于 /v1/chat/completions)
@@ -43,6 +53,10 @@ openai-compatibility:
     models:
       - name: claude-sonnet-4-20250514
         alias: claude-sonnet-4-20250514
+      - name: claude-3-7-sonnet-20250219
+        alias: claude-3-7-sonnet-20250219
+      - name: claude-3-5-sonnet-20241022
+        alias: claude-3-5-sonnet-20241022
 
   # claudex - OpenAI 兼容
   - name: claudex
@@ -52,6 +66,10 @@ openai-compatibility:
     models:
       - name: claude-sonnet-4-20250514
         alias: claude-sonnet-4-20250514
+      - name: claude-3-7-sonnet-20250219
+        alias: claude-3-7-sonnet-20250219
+      - name: claude-3-5-sonnet-20241022
+        alias: claude-3-5-sonnet-20241022
 
 # ============================================================
 # Codex/Responses 端点 (用于 /v1/responses)
@@ -66,6 +84,10 @@ codex-api-key:
     models:
       - name: claude-sonnet-4-20250514
         alias: claude-sonnet-4-20250514
+      - name: claude-3-7-sonnet-20250219
+        alias: claude-3-7-sonnet-20250219
+      - name: claude-3-5-sonnet-20241022
+        alias: claude-3-5-sonnet-20241022
 
   - name: kfc-responses-2
     base-url: https://kfc-api.sxxe.net
@@ -73,6 +95,10 @@ codex-api-key:
     models:
       - name: claude-sonnet-4-20250514
         alias: claude-sonnet-4-20250514
+      - name: claude-3-7-sonnet-20250219
+        alias: claude-3-7-sonnet-20250219
+      - name: claude-3-5-sonnet-20241022
+        alias: claude-3-5-sonnet-20241022
 
   # wzw - Responses 端点
   - name: wzw-responses
@@ -81,6 +107,10 @@ codex-api-key:
     models:
       - name: claude-sonnet-4-20250514
         alias: claude-sonnet-4-20250514
+      - name: claude-3-7-sonnet-20250219
+        alias: claude-3-7-sonnet-20250219
+      - name: claude-3-5-sonnet-20241022
+        alias: claude-3-5-sonnet-20241022
 
   - name: wzw-responses-2
     base-url: https://wzw.pp.ua
@@ -88,6 +118,10 @@ codex-api-key:
     models:
       - name: claude-sonnet-4-20250514
         alias: claude-sonnet-4-20250514
+      - name: claude-3-7-sonnet-20250219
+        alias: claude-3-7-sonnet-20250219
+      - name: claude-3-5-sonnet-20241022
+        alias: claude-3-5-sonnet-20241022
 
   # x666 - Responses 端点
   - name: x666-responses
@@ -96,3 +130,7 @@ codex-api-key:
     models:
       - name: claude-sonnet-4-20250514
         alias: claude-sonnet-4-20250514
+      - name: claude-3-7-sonnet-20250219
+        alias: claude-3-7-sonnet-20250219
+      - name: claude-3-5-sonnet-20241022
+        alias: claude-3-5-sonnet-20241022
