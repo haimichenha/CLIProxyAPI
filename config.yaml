@@ -1,9 +1,9 @@
 # CLIProxyAPI 配置 - 三端互转 (OpenAI ↔ Claude/Anthropic ↔ Codex/Responses)
 # 代理密钥 - GCMP 使用此密钥访问代理
-proxy-api-key: gcmp-proxy-key-2024
+proxy-api-key: gcmp-proxy-key
 
 # 管理密钥
-management-api-key: gcmp-management-2024
+management-api-key: gcmp-management
 
 # ============================================================
 # Claude/Anthropic 原生端点 (用于 /v1/messages)
