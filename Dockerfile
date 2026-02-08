@@ -1,4 +1,4 @@
-FROM golang:1.24-alpine AS builder
+FROM golang:1.23-alpine AS builder
 
 WORKDIR /app
 
@@ -18,13 +18,14 @@ FROM alpine:3.21
 
 RUN apk add --no-cache tzdata ca-certificates
 
-RUN mkdir /CLIProxyAPI
+WORKDIR /CLIProxyAPI
 
-COPY --from=builder ./app/CLIProxyAPI /CLIProxyAPI/CLIProxyAPI
+# 创建所有必要的目录
+RUN mkdir -p /CLIProxyAPI/auths /CLIProxyAPI/logs /CLIProxyAPI/conv
+
+COPY --from=builder /app/CLIProxyAPI /CLIProxyAPI/CLIProxyAPI
 
 COPY config.yaml /CLIProxyAPI/config.yaml
-
-WORKDIR /CLIProxyAPI
 
 EXPOSE 8000
 
