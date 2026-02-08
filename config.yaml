@@ -55,7 +55,7 @@ claude-api-key:
 openai-compatibility:
   # feisakura - OpenAI 兼容
   - name: feisakura
-    base-url: https://api.feisakura.fun
+    base-url: https://api.feisakura.fun/v1
     api-key:
       - api-key: sk-KtxnuaX7AWOOk2SDSuYJQ4lkw8h79fTsHqs4GxY5R5Ssi3S6
     models:
@@ -68,7 +68,7 @@ openai-compatibility:
 
   # claudex - OpenAI 兼容
   - name: claudex
-    base-url: https://code.claudex.us.ci
+    base-url: https://code.claudex.us.ci/v1
     api-key:
       - api-key: sk-7JYdymD7X28VLQh_LFbnLyoF0BytEmBIqGR_CyQUtlGNvgvBWpFKgxX6LrQ
     models:
@@ -86,7 +86,7 @@ openai-compatibility:
 codex-api-key:
   # kfc - Responses 端点 (主要)
   - name: kfc-responses
-    base-url: https://kfc-api.sxxe.net
+    base-url: https://kfc-api.sxxe.net/v1
     api-key: sk-hrznz62Miv83blM3YdBas7YthFrVqVd5xCdAUowzwPYVZIti
     models:
       - name: gpt-5.3-codex-xhigh
@@ -99,7 +99,7 @@ codex-api-key:
         alias: kfcgpt-5.2-codex-xhigh
 
   - name: kfc-responses-2
-    base-url: https://kfc-api.sxxe.net
+    base-url: https://kfc-api.sxxe.net/v1
     api-key: sk-USJrjyL8OPXR7RbZgyC8w4gdmTZB6cWxm8HPolhqfDD9TJIU
     models:
       - name: gpt-5.3-codex-xhigh
