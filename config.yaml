@@ -39,10 +39,10 @@ claude-api-key:
     models:
       - name: claude-sonnet-4-20250514
         alias: anyrouterclaude-sonnet-4-20250514
-      - name: claude-3-7-sonnet-20250219
-        alias: anyrouterclaude-3-7-sonnet-20250219
-      - name: claude-3-5-sonnet-20241022
-        alias: anyrouterclaude-3-5-sonnet-20241022
+      # - name: claude-3-7-sonnet-20250219
+      #   alias: anyrouterclaude-3-7-sonnet-20250219
+      # - name: claude-3-5-sonnet-20241022
+      #   alias: anyrouterclaude-3-5-sonnet-20241022
 
 # ============================================================
 # OpenAI 兼容端点 (用于 /v1/chat/completions)
