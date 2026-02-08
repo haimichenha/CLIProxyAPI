@@ -5,7 +5,7 @@
 host: ""
 
 # Cloud deployment listen port (must not be 0)
-port: 8317
+port: 8000
 
 api-keys:
   - haimichenha
