@@ -1,68 +1,38 @@
-# Server host/interface to bind to. Default is empty ("") to bind all interfaces (IPv4 + IPv6).
-# Use "127.0.0.1" or "localhost" to restrict access to local machine only.
 host: ""
-
-# Server port
 port: 8317
-
-# TLS settings for HTTPS. When enabled, the server listens with the provided certificate and key.
 tls:
   enable: false
   cert: ""
   key: ""
-
-# Management API settings
 remote-management:
   allow-remote: false
   secret-key: ""
   disable-control-panel: false
   panel-github-repository: "https://github.com/router-for-me/Cli-Proxy-API-Management-Center"
-
-# Authentication directory (supports ~ for home directory)
 auth-dir: "~/.cli-proxy-api"
-
-# API keys for authentication
 api-keys:
   - "haimichenha"
   - "linuxDo"
-
-# Enable debug logging
 debug: true
-
 pprof:
   enable: false
   addr: "127.0.0.1:8316"
-
 commercial-mode: false
-logging-to-file: true
+logging-to-file: false
 logs-max-total-size-mb: 0
 error-logs-max-files: 10
 usage-statistics-enabled: false
-
-# Proxy URL. Supports socks5/http/https protocols.
 proxy-url: ""
-
 force-model-prefix: false
 request-retry: 3
 max-retry-interval: 30
-
 quota-exceeded:
   switch-project: true
   switch-preview-model: true
-
 routing:
   strategy: "round-robin"
-
 ws-auth: false
 nonstream-keepalive-interval: 0
-
-# streaming:
-#   keepalive-seconds: 15
-#   bootstrap-retries: 1
-
-# ============================================================
-# Claude API keys (Anthropic format upstream: /v1/messages)
-# ============================================================
 claude-api-key:
   - api-key: "sk-K1KqwBtD3GBVeG4LwJqmUTEyOxiw6m9ZaLxr8ULTBCcB7rwz"
     base-url: "https://anyrouter.top"
@@ -75,7 +45,6 @@ claude-api-key:
         alias: "anyrouterclaude-haiku-4-5"
       - name: "claude-opus-4-6"
         alias: "anyrouterclaude-opus-4-6"
-
   - api-key: "sk-pH7jCaocIbEbinneux3bgmGnk0hV8ftvW7ZCjRJCoBw9uj28"
     base-url: "https://wzw.pp.ua"
     cloak:
@@ -87,12 +56,6 @@ claude-api-key:
         alias: "wongclaude-opus-4-5"
       - name: "claude-opus-4-6"
         alias: "wongclaude-opus-4-6"
-
-    
-
-# ============================================================
-# OpenAI compatibility providers (OpenAI format upstream: /v1/chat/completions)
-# ============================================================
 openai-compatibility:
   - name: "feisakura"
     base-url: "https://api.feisakura.fun/v1"
@@ -105,11 +68,10 @@ openai-compatibility:
         alias: "xyclaude-opus-4-6"
       - name: "claude-opus-4-6-20260205"
         alias: "xyclaude-opus-4-6-20260205"
-
-   - name: "kfc"
+  - name: "kfc"
     base-url: "https://kfc-api.kyx03.de"
     api-key-entries:
-      - api-key: "sk-hrznz62Miv83blM3YdBas7YthFrVqVd5xCdAUowzwPYVZIti"    
+      - api-key: "sk-hrznz62Miv83blM3YdBas7YthFrVqVd5xCdAUowzwPYVZIti"
     models:
       - name: "gpt-5.3-codex-xhigh"
         alias: "kfcgpt-5.3-codex-xhigh"
@@ -119,48 +81,17 @@ openai-compatibility:
         alias: "kfcgpt-5.2-xhigh"
       - name: "gpt-5.2-codex-xhigh"
         alias: "kfcgpt-5.2-codex-xhigh"
-        
-    - name: "bohe"
+  - name: "bohe"
     base-url: "https://x666.me"
     api-key-entries:
-      - api-key: "sk-wT2gX2xM1S1uSeNFjTOL1UBxoHah8sI1wP2IOp1ORW6S8X7p"      
-      models:
-        - name: "gpt-5.3-codex"
-          alias: "bhgpt-5.3-codex"
-        - name: "gpt-5.2-high"
-          alias: "bhgpt-5.2-high"
-        - name: "gpt-5.2-codex"
-          alias: "bhgpt-5.2-codex"
-
-
-# ============================================================
-# Codex API keys (Codex format upstream: /v1/responses)
-# ============================================================
-# codex-api-key:
-#   - api-key: "sk-hrznz62Miv83blM3YdBas7YthFrVqVd5xCdAUowzwPYVZIti"
-#     base-url: "https://kfc-api.kyx03.de"
-#     models:
-#       - name: "gpt-5.3-codex-xhigh"
-#         alias: "kfcgpt-5.3-codex-xhigh"
-#       - name: "gpt-5.3-codex"
-#         alias: "kfcgpt-5.3-codex"
-#       - name: "gpt-5.2-xhigh"
-#         alias: "kfcgpt-5.2-xhigh"
-#       - name: "gpt-5.2-codex-xhigh"
-#         alias: "kfcgpt-5.2-codex-xhigh"
-
-#   - api-key: "sk-wT2gX2xM1S1uSeNFjTOL1UBxoHah8sI1wP2IOp1ORW6S8X7p"
-#     base-url: "https://x666.me"
-#     models:
-#       - name: "gpt-5.3-codex"
-#         alias: "bhgpt-5.3-codex"
-#       - name: "gpt-5.2-high"
-#         alias: "bhgpt-5.2-high"
-#       - name: "gpt-5.2-codex"
-#         alias: "bhgpt-5.2-codex"
-# ============================================================
-# OAuth model aliases
-# ============================================================
+      - api-key: "sk-wT2gX2xM1S1uSeNFjTOL1UBxoHah8sI1wP2IOp1ORW6S8X7p"
+    models:
+      - name: "gpt-5.3-codex"
+        alias: "bhgpt-5.3-codex"
+      - name: "gpt-5.2-high"
+        alias: "bhgpt-5.2-high"
+      - name: "gpt-5.2-codex"
+        alias: "bhgpt-5.2-codex"
 oauth-model-alias:
   antigravity:
     - name: "rev19-uic3-1p"
