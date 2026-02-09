@@ -193,21 +193,9 @@ openai-compatibility:
       - name: claude-opus-4-6-20260205
         alias: xyclaude-opus-4-6-20260205
 
-    - name: kfc-responses
-    base-url: https://kfc-api.sxxe.net
-    api-key: sk-hrznz62Miv83blM3YdBas7YthFrVqVd5xCdAUowzwPYVZIti
-    models:
-      - name: gpt-5.3-codex-xhigh
-        alias: kfcgpt-5.3-codex-xhigh
-      - name: gpt-5.3-codex
-        alias: kfcgpt-5.3-codex
-      - name: gpt-5.2-xhigh
-        alias: kfcgpt-5.2-xhigh
-      - name: gpt-5.2-codex-xhigh
-        alias: kfcgpt-5.2-codex-xhigh
 
   - name: wzw-responses
-    base-url: https://wzw.pp.ua
+    base-url: https://wzw.pp.ua/v1
     api-key: sk-WvTzFcpVLf4ADuMmMUxb0DIUViKbL4veHjpuzPI96j3RJyx1
     models:
       - name: gpt-5.3-codex
@@ -216,18 +204,30 @@ openai-compatibility:
         alias: wonggpt-5.2-codex
       - name: gpt-5.2
         alias: wonggpt-5.2
+        
+  # - name: kfc-responses
+  #   base-url: https://kfc-api.sxxe.net/v1
+  #   api-key: sk-hrznz62Miv83blM3YdBas7YthFrVqVd5xCdAUowzwPYVZIti
+  #   models:
+  #     - name: gpt-5.3-codex-xhigh
+  #       alias: kfcgpt-5.3-codex-xhigh
+  #     - name: gpt-5.3-codex
+  #       alias: kfcgpt-5.3-codex
+  #     - name: gpt-5.2-xhigh
+  #       alias: kfcgpt-5.2-xhigh
+  #     - name: gpt-5.2-codex-xhigh
+  #       alias: kfcgpt-5.2-codex-xhigh
 
-
-  - name: x666-responses
-    base-url: https://x666.me
-    api-key: sk-wT2gX2xM1S1uSeNFjTOL1UBxoHah8sI1wP2IOp1ORW6S8X7p
-    models:
-      - name: gpt-5.3-codex
-        alias: bhgpt-5.3-codex
-      - name: gpt-5.2-high
-        alias: bhgpt-5.2-high
-      - name: gpt-5.2-codex
-        alias: bhgpt-5.2-codex
+  # - name: x666-responses
+  #   base-url: https://x666.me/v1
+  #   api-key: sk-wT2gX2xM1S1uSeNFjTOL1UBxoHah8sI1wP2IOp1ORW6S8X7p
+  #   models:
+  #     - name: gpt-5.3-codex
+  #       alias: bhgpt-5.3-codex
+  #     - name: gpt-5.2-high
+  #       alias: bhgpt-5.2-high
+  #     - name: gpt-5.2-codex
+  #       alias: bhgpt-5.2-codex
 
   # - name: "openrouter" # The name of the provider; it will be used in the user agent and other places.
   #   prefix: "test" # optional: require calls like "test/kimi-k2" to target this provider's credentials
@@ -242,7 +242,7 @@ openai-compatibility:
 
 codex-api-key:
   - name: kfc-responses
-    base-url: https://kfc-api.sxxe.net
+    base-url: https://kfc-api.kyx03.de
     api-key: sk-hrznz62Miv83blM3YdBas7YthFrVqVd5xCdAUowzwPYVZIti
     models:
       - name: gpt-5.3-codex-xhigh
@@ -253,17 +253,6 @@ codex-api-key:
         alias: kfcgpt-5.2-xhigh
       - name: gpt-5.2-codex-xhigh
         alias: kfcgpt-5.2-codex-xhigh
-
-  - name: wzw-responses
-    base-url: https://wzw.pp.ua
-    api-key: sk-WvTzFcpVLf4ADuMmMUxb0DIUViKbL4veHjpuzPI96j3RJyx1
-    models:
-      - name: gpt-5.3-codex
-        alias: wonggpt-5.3-codex
-      - name: gpt-5.2-codex
-        alias: wonggpt-5.2-codex
-      - name: gpt-5.2
-        alias: wonggpt-5.2
 
 
   - name: x666-responses
