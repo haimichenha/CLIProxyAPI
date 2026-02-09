@@ -54,8 +54,6 @@ claude-api-key:
         alias: anyrouterclaude-opus-4-5
       - name: claude-haiku-4-5-20251001
         alias: anyrouterclaude-haiku-4-5
-      - name: claude-opus-4-6
-        alias: anyrouterclaude-opus-4-6
 
   - name: anyrouter-2
     base-url: https://anyrouter.top
@@ -86,6 +84,8 @@ openai-compatibility:
         alias: xyclaude-opus-4-5
       - name: claude-opus-4-6
         alias: xyclaude-opus-4-6
+      - name: claude-opus-4-6
+        alias: anyrouterclaude-opus-4-6
       - name: claude-opus-4-6-20260205
         alias: xyclaude-opus-4-6-20260205
 
