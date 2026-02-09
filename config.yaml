@@ -17,6 +17,18 @@ management-api-key: gcmp-management
 auth-dir: /root/.cli-proxy-api
 
 # ============================================================
+# Payload 配置 - 自动过滤不兼容参数
+# Claude API 不允许同时传 temperature 和 top_p
+# ============================================================
+payload:
+  filter:
+    - models:
+        - name: "claude-*"
+          protocol: claude
+      params:
+        - top_p
+
+# ============================================================
 # Claude/Anthropic 原生端点 (用于 /v1/messages)
 # anyrouter 需要 Claude Code 身份验证
 # ============================================================
