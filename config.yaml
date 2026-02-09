@@ -88,6 +88,8 @@ claude-api-key:
       - name: "claude-opus-4-6"
         alias: "wongclaude-opus-4-6"
 
+    
+
 # ============================================================
 # OpenAI compatibility providers (OpenAI format upstream: /v1/chat/completions)
 # ============================================================
@@ -104,13 +106,10 @@ openai-compatibility:
       - name: "claude-opus-4-6-20260205"
         alias: "xyclaude-opus-4-6-20260205"
 
-
-# ============================================================
-# Codex API keys (Codex format upstream: /v1/responses)
-# ============================================================
-codex-api-key:
-  - api-key: "sk-hrznz62Miv83blM3YdBas7YthFrVqVd5xCdAUowzwPYVZIti"
+   - name: "kfc"
     base-url: "https://kfc-api.kyx03.de"
+    api-key-entries:
+      - api-key: "sk-hrznz62Miv83blM3YdBas7YthFrVqVd5xCdAUowzwPYVZIti"    
     models:
       - name: "gpt-5.3-codex-xhigh"
         alias: "kfcgpt-5.3-codex-xhigh"
@@ -120,16 +119,45 @@ codex-api-key:
         alias: "kfcgpt-5.2-xhigh"
       - name: "gpt-5.2-codex-xhigh"
         alias: "kfcgpt-5.2-codex-xhigh"
-
-  - api-key: "sk-wT2gX2xM1S1uSeNFjTOL1UBxoHah8sI1wP2IOp1ORW6S8X7p"
+        
+    - name: "bohe"
     base-url: "https://x666.me"
-    models:
-      - name: "gpt-5.3-codex"
-        alias: "bhgpt-5.3-codex"
-      - name: "gpt-5.2-high"
-        alias: "bhgpt-5.2-high"
-      - name: "gpt-5.2-codex"
-        alias: "bhgpt-5.2-codex"
+    api-key-entries:
+      - api-key: "sk-wT2gX2xM1S1uSeNFjTOL1UBxoHah8sI1wP2IOp1ORW6S8X7p"      
+      models:
+        - name: "gpt-5.3-codex"
+          alias: "bhgpt-5.3-codex"
+        - name: "gpt-5.2-high"
+          alias: "bhgpt-5.2-high"
+        - name: "gpt-5.2-codex"
+          alias: "bhgpt-5.2-codex"
+
+
+# ============================================================
+# Codex API keys (Codex format upstream: /v1/responses)
+# ============================================================
+# codex-api-key:
+#   - api-key: "sk-hrznz62Miv83blM3YdBas7YthFrVqVd5xCdAUowzwPYVZIti"
+#     base-url: "https://kfc-api.kyx03.de"
+#     models:
+#       - name: "gpt-5.3-codex-xhigh"
+#         alias: "kfcgpt-5.3-codex-xhigh"
+#       - name: "gpt-5.3-codex"
+#         alias: "kfcgpt-5.3-codex"
+#       - name: "gpt-5.2-xhigh"
+#         alias: "kfcgpt-5.2-xhigh"
+#       - name: "gpt-5.2-codex-xhigh"
+#         alias: "kfcgpt-5.2-codex-xhigh"
+
+#   - api-key: "sk-wT2gX2xM1S1uSeNFjTOL1UBxoHah8sI1wP2IOp1ORW6S8X7p"
+#     base-url: "https://x666.me"
+#     models:
+#       - name: "gpt-5.3-codex"
+#         alias: "bhgpt-5.3-codex"
+#       - name: "gpt-5.2-high"
+#         alias: "bhgpt-5.2-high"
+#       - name: "gpt-5.2-codex"
+#         alias: "bhgpt-5.2-codex"
 # ============================================================
 # OAuth model aliases
 # ============================================================
