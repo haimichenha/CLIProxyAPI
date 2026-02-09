@@ -73,11 +73,13 @@ claude-api-key:
 
 # ============================================================
 # OpenAI 兼容端点 (用于 /v1/chat/completions)
-# 所有上游 supported_endpoint_types=["openai"] 的站点都放这里
-# CLIProxyAPI 会自动在 /v1/responses 请求进来时转换为 chat/completions
+# 注意 base-url 规则：
+#   openai-compatibility 执行器会在 base-url 后拼 /chat/completions
+#   所以如果上游路径是 /chat/completions，base-url 不要带 /v1
+#   如果上游路径是 /v1/chat/completions，base-url 要带 /v1
 # ============================================================
 openai-compatibility:
-  # feisakura
+  # feisakura - 上游路径 /v1/chat/completions ✓
   - name: feisakura
     base-url: https://api.feisakura.fun/v1
     api-key-entries:
@@ -90,7 +92,7 @@ openai-compatibility:
       - name: claude-opus-4-6-20260205
         alias: xyclaude-opus-4-6-20260205
 
-  # claudex
+  # claudex - 上游路径 /v1/chat/completions (站点偶尔 502)
   - name: claudex
     base-url: https://claudex.us.ci/v1
     api-key-entries:
@@ -107,9 +109,9 @@ openai-compatibility:
       - name: gpt-5.2-codex
         alias: fancogpt-5.2-codex
 
-  # kfc - key1 (上游只支持 openai 格式，不是 responses！)
+  # kfc - key1 (上游路径 /chat/completions，不带 /v1！)
   - name: kfc
-    base-url: https://kfc-api.sxxe.net/v1
+    base-url: https://kfc-api.sxxe.net
     api-key-entries:
       - api-key: sk-hrznz62Miv83blM3YdBas7YthFrVqVd5xCdAUowzwPYVZIti
     models:
@@ -122,9 +124,9 @@ openai-compatibility:
       - name: gpt-5.2-codex-xhigh
         alias: kfcgpt-5.2-codex-xhigh
 
-  # kfc - key2 (同站点第二个 key，别名加 -b 后缀避免重复)
+  # kfc - key2 (别名加 -b 后缀避免重复)
   - name: kfc-2
-    base-url: https://kfc-api.sxxe.net/v1
+    base-url: https://kfc-api.sxxe.net
     api-key-entries:
       - api-key: sk-USJrjyL8OPXR7RbZgyC8w4gdmTZB6cWxm8HPolhqfDD9TJIU
     models:
@@ -137,9 +139,9 @@ openai-compatibility:
       - name: gpt-5.2-codex-xhigh
         alias: kfcgpt-5.2-codex-xhigh-b
 
-  # wzw - key1
+  # wzw - key1 (上游路径 /chat/completions，不带 /v1！)
   - name: wzw
-    base-url: https://wzw.pp.ua/v1
+    base-url: https://wzw.pp.ua
     api-key-entries:
       - api-key: sk-WvTzFcpVLf4ADuMmMUxb0DIUViKbL4veHjpuzPI96j3RJyx1
     models:
@@ -152,7 +154,7 @@ openai-compatibility:
 
   # wzw - key2
   - name: wzw-2
-    base-url: https://wzw.pp.ua/v1
+    base-url: https://wzw.pp.ua
     api-key-entries:
       - api-key: sk-pH7jCaocIbEbinneux3bgmGnk0hV8ftvW7ZCjRJCoBw9uj28
     models:
@@ -163,9 +165,9 @@ openai-compatibility:
       - name: claude-opus-4-6
         alias: wongclaude-opus-4-6
 
-  # x666
+  # x666 (上游路径 /chat/completions，不带 /v1！)
   - name: x666
-    base-url: https://x666.me/v1
+    base-url: https://x666.me
     api-key-entries:
       - api-key: sk-wT2gX2xM1S1uSeNFjTOL1UBxoHah8sI1wP2IOp1ORW6S8X7p
     models:
