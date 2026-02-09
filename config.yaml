@@ -40,11 +40,16 @@ payload:
 # ============================================================
 # Claude/Anthropic 原生端点 (用于 /v1/messages)
 # anyrouter 需要 Claude Code 身份验证
+# headers 中强制设置 User-Agent 覆盖 GCMP 的 UA
+# （因为 EnsureHeader 不会覆盖客户端已有的 header，
+#   但 config headers 通过 ApplyCustomHeadersFromAttrs 用 Set() 强制覆盖）
 # ============================================================
 claude-api-key:
   - name: anyrouter
     base-url: https://anyrouter.top
     api-key: sk-K1KqwBtD3GBVeG4LwJqmUTEyOxiw6m9ZaLxr8ULTBCcB7rwz
+    headers:
+      User-Agent: "claude-cli/1.0.83 (external, cli)"
     cloak:
       mode: always
       strict-mode: true
@@ -59,6 +64,8 @@ claude-api-key:
   - name: anyrouter-2
     base-url: https://anyrouter.top
     api-key: sk-3I0jIsf9Tjdy7ym0eeBfxgaYFPbDM98R3AnbHqoiRURzEbsd
+    headers:
+      User-Agent: "claude-cli/1.0.83 (external, cli)"
     cloak:
       mode: always
       strict-mode: true
