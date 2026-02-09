@@ -69,7 +69,7 @@ openai-compatibility:
       - name: "claude-opus-4-6-20260205"
         alias: "xyclaude-opus-4-6-20260205"
   - name: "kfc"
-    base-url: "https://kfc-api.kyx03.de"
+    base-url: "https://kfc-api.kyx03.de/v1"
     api-key-entries:
       - api-key: "sk-hrznz62Miv83blM3YdBas7YthFrVqVd5xCdAUowzwPYVZIti"
     models:
@@ -82,7 +82,7 @@ openai-compatibility:
       - name: "gpt-5.2-codex-xhigh"
         alias: "kfcgpt-5.2-codex-xhigh"
   - name: "bohe"
-    base-url: "https://x666.me"
+    base-url: "https://x666.me/v1"
     api-key-entries:
       - api-key: "sk-wT2gX2xM1S1uSeNFjTOL1UBxoHah8sI1wP2IOp1ORW6S8X7p"
     models:
