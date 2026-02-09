@@ -41,6 +41,8 @@ payload:
 # Claude/Anthropic 原生端点 (用于 /v1/messages)
 # anyrouter 需要 Claude Code 身份验证
 # headers 中强制设置 User-Agent 覆盖 GCMP 的 UA
+# （因为 EnsureHeader 不会覆盖客户端已有的 header，
+#   但 config headers 通过 ApplyCustomHeadersFromAttrs 用 Set() 强制覆盖）
 # ============================================================
 claude-api-key:
   - name: anyrouter
@@ -73,11 +75,8 @@ claude-api-key:
 
 # ============================================================
 # OpenAI 兼容端点 (用于 /v1/chat/completions)
-# 所有上游 supported_endpoint_types=["openai"] 的站点都放这里
-# CLIProxyAPI 会自动在 /v1/responses 请求进来时转换为 chat/completions
 # ============================================================
 openai-compatibility:
-  # feisakura
   - name: feisakura
     base-url: https://api.feisakura.fun/v1
     api-key-entries:
@@ -90,7 +89,6 @@ openai-compatibility:
       - name: claude-opus-4-6-20260205
         alias: xyclaude-opus-4-6-20260205
 
-  # claudex
   - name: claudex
     base-url: https://claudex.us.ci/v1
     api-key-entries:
@@ -107,11 +105,13 @@ openai-compatibility:
       - name: gpt-5.2-codex
         alias: fancogpt-5.2-codex
 
-  # kfc - key1 (上游只支持 openai 格式，不是 responses！)
-  - name: kfc
-    base-url: https://kfc-api.sxxe.net/v1
-    api-key-entries:
-      - api-key: sk-hrznz62Miv83blM3YdBas7YthFrVqVd5xCdAUowzwPYVZIti
+# ============================================================
+# Codex/Responses 端点 (用于 /v1/responses)
+# ============================================================
+codex-api-key:
+  - name: kfc-responses
+    base-url: https://kfc-api.sxxe.net
+    api-key: sk-hrznz62Miv83blM3YdBas7YthFrVqVd5xCdAUowzwPYVZIti
     models:
       - name: gpt-5.3-codex-xhigh
         alias: kfcgpt-5.3-codex-xhigh
@@ -122,26 +122,22 @@ openai-compatibility:
       - name: gpt-5.2-codex-xhigh
         alias: kfcgpt-5.2-codex-xhigh
 
-  # kfc - key2 (同站点第二个 key，别名加 -b 后缀避免重复)
-  - name: kfc-2
-    base-url: https://kfc-api.sxxe.net/v1
-    api-key-entries:
-      - api-key: sk-USJrjyL8OPXR7RbZgyC8w4gdmTZB6cWxm8HPolhqfDD9TJIU
+  - name: kfc-responses-2
+    base-url: https://kfc-api.sxxe.net
+    api-key: sk-USJrjyL8OPXR7RbZgyC8w4gdmTZB6cWxm8HPolhqfDD9TJIU
     models:
       - name: gpt-5.3-codex-xhigh
-        alias: kfcgpt-5.3-codex-xhigh-b
+        alias: kfcgpt-5.3-codex-xhigh
       - name: gpt-5.3-codex
-        alias: kfcgpt-5.3-codex-b
+        alias: kfcgpt-5.3-codex
       - name: gpt-5.2-xhigh
-        alias: kfcgpt-5.2-xhigh-b
+        alias: kfcgpt-5.2-xhigh
       - name: gpt-5.2-codex-xhigh
-        alias: kfcgpt-5.2-codex-xhigh-b
+        alias: kfcgpt-5.2-codex-xhigh
 
-  # wzw - key1
-  - name: wzw
-    base-url: https://wzw.pp.ua/v1
-    api-key-entries:
-      - api-key: sk-WvTzFcpVLf4ADuMmMUxb0DIUViKbL4veHjpuzPI96j3RJyx1
+  - name: wzw-responses
+    base-url: https://wzw.pp.ua
+    api-key: sk-WvTzFcpVLf4ADuMmMUxb0DIUViKbL4veHjpuzPI96j3RJyx1
     models:
       - name: gpt-5.3-codex
         alias: wonggpt-5.3-codex
@@ -150,11 +146,9 @@ openai-compatibility:
       - name: gpt-5.2
         alias: wonggpt-5.2
 
-  # wzw - key2
-  - name: wzw-2
-    base-url: https://wzw.pp.ua/v1
-    api-key-entries:
-      - api-key: sk-pH7jCaocIbEbinneux3bgmGnk0hV8ftvW7ZCjRJCoBw9uj28
+  - name: wzw-responses-2
+    base-url: https://wzw.pp.ua
+    api-key: sk-pH7jCaocIbEbinneux3bgmGnk0hV8ftvW7ZCjRJCoBw9uj28
     models:
       - name: claude-opus-4-5-20251101
         alias: wongclaude-opus-4-5-20251101
@@ -163,11 +157,9 @@ openai-compatibility:
       - name: claude-opus-4-6
         alias: wongclaude-opus-4-6
 
-  # x666
-  - name: x666
-    base-url: https://x666.me/v1
-    api-key-entries:
-      - api-key: sk-wT2gX2xM1S1uSeNFjTOL1UBxoHah8sI1wP2IOp1ORW6S8X7p
+  - name: x666-responses
+    base-url: https://x666.me
+    api-key: sk-wT2gX2xM1S1uSeNFjTOL1UBxoHah8sI1wP2IOp1ORW6S8X7p
     models:
       - name: gpt-5.3-codex
         alias: bhgpt-5.3-codex
