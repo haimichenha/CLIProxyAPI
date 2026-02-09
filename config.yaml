@@ -17,12 +17,9 @@ management-api-key: gcmp-management
 auth-dir: /root/.cli-proxy-api
 
 # ============================================================
-# Claude/Anthropic 原生端点 (用于 /v1/messages)
-# 这些端点接收 Anthropic Messages API 格式请求
-# anyrouter 需要 Claude Code 格式，所以放在这里！
-# ============================================================
-# ============================================================
-# Payload 配置 - 强制贴近 Claude Code 请求形态（针对 GCMP）
+# Payload 配置 - 让请求更贴近 Claude Code 形态
+# 注意：不要 filter system / metadata.user_id / thinking
+#       因为 cloak 会注入这些字段，filter 在 cloak 之后执行会删掉它们
 # ============================================================
 payload:
   filter:
@@ -31,18 +28,20 @@ payload:
           protocol: claude
       params:
         - top_p
-        - metadata.user_id
-        - system
-        - thinking
+        - top_k
 
     - models:
         - name: "claude-*"
           protocol: claude
       params:
         - top_p
+        - top_k
 
+# ============================================================
+# Claude/Anthropic 原生端点 (用于 /v1/messages)
+# anyrouter 需要 Claude Code 身份验证
+# ============================================================
 claude-api-key:
-  # anyrouter - 需要 Claude Messages API 格式
   - name: anyrouter
     base-url: https://anyrouter.top
     api-key: sk-K1KqwBtD3GBVeG4LwJqmUTEyOxiw6m9ZaLxr8ULTBCcB7rwz
@@ -69,10 +68,8 @@ claude-api-key:
 
 # ============================================================
 # OpenAI 兼容端点 (用于 /v1/chat/completions)
-# 这些端点接收 OpenAI 格式请求
 # ============================================================
 openai-compatibility:
-  # feisakura - OpenAI 兼容
   - name: feisakura
     base-url: https://api.feisakura.fun/v1
     api-key-entries:
@@ -85,7 +82,6 @@ openai-compatibility:
       - name: claude-opus-4-6-20260205
         alias: xyclaude-opus-4-6-20260205
 
-  # claudex - OpenAI 兼容
   - name: claudex
     base-url: https://claudex.us.ci/v1
     api-key-entries:
@@ -101,13 +97,11 @@ openai-compatibility:
         alias: fancogpt-5.3-codex
       - name: gpt-5.2-codex
         alias: fancogpt-5.2-codex
+
 # ============================================================
 # Codex/Responses 端点 (用于 /v1/responses)
-# 这些端点支持 OpenAI Responses API 格式
-# kfc, wzw, x666 主要是 responses 端点
 # ============================================================
 codex-api-key:
-  # kfc - Responses 端点 (主要)
   - name: kfc-responses
     base-url: https://kfc-api.sxxe.net
     api-key: sk-hrznz62Miv83blM3YdBas7YthFrVqVd5xCdAUowzwPYVZIti
@@ -134,7 +128,6 @@ codex-api-key:
       - name: gpt-5.2-codex-xhigh
         alias: kfcgpt-5.2-codex-xhigh
 
-  # wzw - Responses 端点
   - name: wzw-responses
     base-url: https://wzw.pp.ua
     api-key: sk-WvTzFcpVLf4ADuMmMUxb0DIUViKbL4veHjpuzPI96j3RJyx1
@@ -157,7 +150,6 @@ codex-api-key:
       - name: claude-opus-4-6
         alias: wongclaude-opus-4-6
 
-  # x666 - Responses 端点
   - name: x666-responses
     base-url: https://x666.me
     api-key: sk-wT2gX2xM1S1uSeNFjTOL1UBxoHah8sI1wP2IOp1ORW6S8X7p
