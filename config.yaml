@@ -104,17 +104,6 @@ openai-compatibility:
       - name: "claude-opus-4-6-20260205"
         alias: "xyclaude-opus-4-6-20260205"
 
-  - name: "wzw-responses"
-    base-url: "https://wzw.pp.ua/v1"
-    api-key-entries:
-      - api-key: "sk-WvTzFcpVLf4ADuMmMUxb0DIUViKbL4veHjpuzPI96j3RJyx1"
-    models:
-      - name: "gpt-5.3-codex"
-        alias: "wonggpt-5.3-codex"
-      - name: "gpt-5.2-codex"
-        alias: "wonggpt-5.2-codex"
-      - name: "gpt-5.2"
-        alias: "wonggpt-5.2"
 
 # ============================================================
 # Codex API keys (Codex format upstream: /v1/responses)
