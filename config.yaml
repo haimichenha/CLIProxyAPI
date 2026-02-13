@@ -92,7 +92,6 @@ openai-compatibility:
         alias: "bhgpt-5.2-high"
       - name: "gpt-5.2-codex"
         alias: "bhgpt-5.2-codex"
-        
     - name: "eigin"
     base-url: "https://api.einzieg.site/v1"
     api-key-entries:
