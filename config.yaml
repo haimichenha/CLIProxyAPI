@@ -68,19 +68,19 @@ openai-compatibility:
         alias: "xyclaude-opus-4-6"
       - name: "claude-opus-4-6-20260205"
         alias: "xyclaude-opus-4-6-20260205"
-  - name: "kfc"
-    base-url: "https://kfc-api.kyx03.de/v1"
-    api-key-entries:
-      - api-key: "sk-hrznz62Miv83blM3YdBas7YthFrVqVd5xCdAUowzwPYVZIti"
-    models:
-      - name: "gpt-5.3-codex-xhigh"
-        alias: "kfcgpt-5.3-codex-xhigh"
-      - name: "gpt-5.3-codex"
-        alias: "kfcgpt-5.3-codex"
-      - name: "gpt-5.2-xhigh"
-        alias: "kfcgpt-5.2-xhigh"
-      - name: "gpt-5.2-codex-xhigh"
-        alias: "kfcgpt-5.2-codex-xhigh"
+  # - name: "kfc"
+  #   base-url: "https://kfc-api.kyx03.de/v1"
+  #   api-key-entries:
+  #     - api-key: "sk-hrznz62Miv83blM3YdBas7YthFrVqVd5xCdAUowzwPYVZIti"
+  #   models:
+  #     - name: "gpt-5.3-codex-xhigh"
+  #       alias: "kfcgpt-5.3-codex-xhigh"
+  #     - name: "gpt-5.3-codex"
+  #       alias: "kfcgpt-5.3-codex"
+  #     - name: "gpt-5.2-xhigh"
+  #       alias: "kfcgpt-5.2-xhigh"
+  #     - name: "gpt-5.2-codex-xhigh"
+  #       alias: "kfcgpt-5.2-codex-xhigh"
   - name: "bohe"
     base-url: "https://x666.me/v1"
     api-key-entries:
