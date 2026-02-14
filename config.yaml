@@ -95,7 +95,7 @@ openai-compatibility:
   - name: "eigin"
     base-url: "https://api.einzieg.site/v1"
     api-key-entries:
-      - api-key: "sk-VIdeRwg1yNyOyUDycWeSb2OZT2qpnTXTt7GwHajNVCXnvE4Q"
+      - api-key: sk-VIdeRwg1yNyOyUDycWeSb2OZT2qpnTXTt7GwHajNVCXnvE4Q"
     models:
       - name: "gpt-5.3-codex"
         alias: "eigpt-5.3-codex"
