@@ -92,17 +92,17 @@ openai-compatibility:
         alias: "bhgpt-5.2-high"
       - name: "gpt-5.2-codex"
         alias: "bhgpt-5.2-codex"
-  - name: "eigin"
+   - name: "ei"
     base-url: "https://api.einzieg.site/v1"
     api-key-entries:
       - api-key: "sk-L55E1BRaGo52MnGmSV5b7oZQlu5DZmyuaenQkUAapOlfol9S"
     models:
       - name: "gpt-5.3-codex"
         alias: "eigpt-5.3-codex"
+      - name: "gpt-5.2-high"
+        alias: "eigpt-5.2-high"
       - name: "gpt-5.2-codex"
         alias: "eigpt-5.2-codex"
-      - name: "gpt-5.2"
-        alias: "eigpt-5.2"
 oauth-model-alias:
   antigravity:
     - name: "rev19-uic3-1p"
