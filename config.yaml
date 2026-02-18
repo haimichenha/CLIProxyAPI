@@ -58,7 +58,7 @@ claude-api-key:
         alias: "wongclaude-opus-4-6"
 openai-compatibility:
   - name: "feisakura"
-    base-url: "https://api.hoshino.edu.rs/v1"
+    base-url: "https://api.hoshino.edu.rs"
     api-key-entries:
       - api-key: "sk-KtxnuaX7AWOOk2SDSuYJQ4lkw8h79fTsHqs4GxY5R5Ssi3S6"
     models:
