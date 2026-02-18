@@ -58,7 +58,6 @@ claude-api-key:
         alias: "wongclaude-opus-4-6"
         - name: "feisakura"
     base-url: "https://api.hoshino.edu.rs"
-    api-key-entries:
       - api-key: "sk-KtxnuaX7AWOOk2SDSuYJQ4lkw8h79fTsHqs4GxY5R5Ssi3S6"
     models:
       - name: "claude-opus-4-5-20251101"
