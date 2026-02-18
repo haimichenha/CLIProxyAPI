@@ -56,8 +56,7 @@ claude-api-key:
         alias: "wongclaude-opus-4-5"
       - name: "claude-opus-4-6"
         alias: "wongclaude-opus-4-6"
-openai-compatibility:
-  - name: "feisakura"
+        - name: "feisakura"
     base-url: "https://api.hoshino.edu.rs"
     api-key-entries:
       - api-key: "sk-KtxnuaX7AWOOk2SDSuYJQ4lkw8h79fTsHqs4GxY5R5Ssi3S6"
@@ -68,6 +67,7 @@ openai-compatibility:
         alias: "xyclaude-opus-4-6"
       - name: "claude-opus-4-6-20260205"
         alias: "xyclaude-opus-4-6-20260205"
+openai-compatibility:
   # - name: "kfc"
   #   base-url: "https://kfc-api.kyx03.de/v1"
   #   api-key-entries:
