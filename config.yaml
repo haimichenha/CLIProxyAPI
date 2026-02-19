@@ -103,6 +103,8 @@ openai-compatibility:
         alias: "eigpt-5.2-high"
       - name: "gpt-5.2-codex"
         alias: "eigpt-5.2-codex"
+      - name: "gpt-5.3-codex-spark"
+        alias: "gpt-5.3-codex-spark"
 oauth-model-alias:
   antigravity:
     - name: "rev19-uic3-1p"
