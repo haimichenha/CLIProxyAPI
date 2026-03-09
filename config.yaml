@@ -35,9 +35,9 @@ ws-auth: false
 nonstream-keepalive-interval: 0
 claude-api-key:
   - api-key: "sk-K1KqwBtD3GBVeG4LwJqmUTEyOxiw6m9ZaLxr8ULTBCcB7rwz"
-    base-url: "https://anyrouter.top"
-    cloak:
-      mode: "always"
+    base-url: "https://anyrouter2api.falcionialessandra554.workers.dev"
+    # cloak:
+    #   mode: "always"
     models:
       - name: "claude-opus-4-5-20251101"
         alias: "anyrouterclaude-opus-4-5"
