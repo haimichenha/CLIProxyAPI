@@ -13,7 +13,7 @@ auth-dir: "~/.cli-proxy-api"
 api-keys:
   - "haimichenha"
   - "linuxDo"
-debug: true
+debug: false
 pprof:
   enable: false
   addr: "127.0.0.1:8316"
