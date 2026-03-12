@@ -36,11 +36,9 @@ nonstream-keepalive-interval: 0
 claude-api-key:
   - api-key: "sk-K1KqwBtD3GBVeG4LwJqmUTEyOxiw6m9ZaLxr8ULTBCcB7rwz"
     base-url: "http://40.233.1.158:19998"
-    cloak:
-      mode: "always"
+    # cloak:
+    #   mode: "always"
     models:
-      - name: "claude-opus-4-5-20251101"
-        alias: "anyrouterclaude-opus-4-5"
       - name: "claude-haiku-4-5-20251001"
         alias: "anyrouterclaude-haiku-4-5"
       - name: "claude-opus-4-6"
