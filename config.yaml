@@ -35,9 +35,9 @@ ws-auth: false
 nonstream-keepalive-interval: 0
 claude-api-key:
   - api-key: "sk-K1KqwBtD3GBVeG4LwJqmUTEyOxiw6m9ZaLxr8ULTBCcB7rwz"
-    base-url: "http://40.233.1.158:19998"
-    # cloak:
-    #   mode: "always"
+    base-url: "https://a-ocnfniawgw.cn-shanghai.fcapp.run"
+    cloak:
+      mode: "always"
     models:
       - name: "claude-haiku-4-5-20251001"
         alias: "anyrouterclaude-haiku-4-5"
