@@ -180,12 +180,29 @@ func ConvertOpenAIRequestToCodex(modelName string, inputRawJSON []byte, stream b
 								msg, _ = sjson.SetRaw(msg, "content.-1", part)
 							}
 						case "file":
-							// Files are not specified in examples; skip for now
+							if role == "user" {
+								fileData := it.Get("file.file_data").String()
+								filename := it.Get("file.filename").String()
+								if fileData != "" {
+									part := `{}`
+									part, _ = sjson.Set(part, "type", "input_file")
+									part, _ = sjson.Set(part, "file_data", fileData)
+									if filename != "" {
+										part, _ = sjson.Set(part, "filename", filename)
+									}
+									msg, _ = sjson.SetRaw(msg, "content.-1", part)
+								}
+							}
 						}
 					}
 				}
 
-				out, _ = sjson.SetRaw(out, "input.-1", msg)
+				// Don't emit empty assistant messages when only tool_calls
+				// are present — Responses API needs function_call items
+				// directly, otherwise call_id matching fails (#2132).
+				if role != "assistant" || len(gjson.Get(msg, "content").Array()) > 0 {
+					out, _ = sjson.SetRaw(out, "input.-1", msg)
+				}
 
 				// Handle tool calls for assistant messages as separate top-level objects
 				if role == "assistant" {

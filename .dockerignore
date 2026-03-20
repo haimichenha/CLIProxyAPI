@@ -30,6 +30,7 @@ bin/*
 .agent/*
 .agents/*
 .opencode/*
+.idea/*
 .bmad/*
 _bmad/*
 _bmad-output/*
