@@ -11,8 +11,8 @@ remote-management:
   panel-github-repository: "https://github.com/router-for-me/Cli-Proxy-API-Management-Center"
 auth-dir: "~/.cli-proxy-api"
 api-keys:
-  - "haimichenha"
-  - "linuxDo"
+  - ""
+  - ""
 debug: false
 pprof:
   enable: false
@@ -34,7 +34,7 @@ routing:
 ws-auth: false
 nonstream-keepalive-interval: 0
 claude-api-key:
-  - api-key: "sk-K1KqwBtD3GBVeG4LwJqmUTEyOxiw6m9ZaLxr8ULTBCcB7rwz"
+  - api-key: ""
     base-url: "https://a-ocnfniawgw.cn-shanghai.fcapp.run"
     cloak:
       mode: "always"
@@ -43,7 +43,7 @@ claude-api-key:
         alias: "anyrouterclaude-haiku-4-5"
       - name: "claude-opus-4-6"
         alias: "anyrouterclaude-opus-4-6"
-  - api-key: "sk-pH7jCaocIbEbinneux3bgmGnk0hV8ftvW7ZCjRJCoBw9uj28"
+  - api-key: ""
     base-url: "https://wzw.pp.ua"
     cloak:
       mode: "always"
@@ -54,7 +54,7 @@ claude-api-key:
         alias: "wongclaude-opus-4-5"
       - name: "claude-opus-4-6"
         alias: "wongclaude-opus-4-6"
-  - api-key: "sk-KtxnuaX7AWOOk2SDSuYJQ4lkw8h79fTsHqs4GxY5R5Ssi3S6"
+  - api-key: ""
     base-url: "https://api.hoshino.edu.rs"
     cloak:
       mode: "always"
@@ -69,7 +69,7 @@ openai-compatibility:
   # - name: "kfc"
   #   base-url: "https://kfc-api.kyx03.de/v1"
   #   api-key-entries:
-  #     - api-key: "sk-hrznz62Miv83blM3YdBas7YthFrVqVd5xCdAUowzwPYVZIti"
+  #     - api-key: ""
   #   models:
   #     - name: "gpt-5.3-codex-xhigh"
   #       alias: "kfcgpt-5.3-codex-xhigh"
@@ -82,7 +82,7 @@ openai-compatibility:
   - name: "bohe"
     base-url: "https://x666.me/v1"
     api-key-entries:
-      - api-key: "sk-wT2gX2xM1S1uSeNFjTOL1UBxoHah8sI1wP2IOp1ORW6S8X7p"
+      - api-key: ""
     models:
       - name: "gpt-5.3-codex"
         alias: "bhgpt-5.3-codex"
@@ -104,7 +104,7 @@ openai-compatibility:
   - name: "ei"
     base-url: "https://api.einzieg.site/v1"
     api-key-entries:
-      - api-key: "sk-L55E1BRaGo52MnGmSV5b7oZQlu5DZmyuaenQkUAapOlfol9S"
+      - api-key: ""
     models:
       - name: "gpt-5.3-codex"
         alias: "eigpt-5.3-codex"
